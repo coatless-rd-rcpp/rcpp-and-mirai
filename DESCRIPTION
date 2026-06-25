@@ -1,0 +1,21 @@
+Package: RcppMirai
+Title: Calling an Rcpp function with mirai
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "James",
+           family = "Balamuta",
+           role = c("aut", "cre"),
+           email = "balamut2@illinois.edu")
+Description: Provides an example implementation using a package to house a
+    C++ function that is distributed in parallel across 'mirai' daemons.
+BugReports: https://github.com/coatless-rd-rcpp/rcpp-and-mirai/issues
+URL: https://github.com/coatless-rd-rcpp/rcpp-and-mirai, https://rd-rcpp.thecoatlessprofessor.com/rcpp-and-mirai/
+License: GPL (>= 2)
+Encoding: UTF-8
+LinkingTo:
+    Rcpp
+Imports:
+    Rcpp (>= 1.0.12),
+    mirai (>= 2.0.0)
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0
