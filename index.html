@@ -170,11 +170,11 @@
 <code>DESCRIPTION</code><a class="anchor" aria-label="anchor" href="#description"></a>
 </h3>
 <p>Surfacing the <em>C++</em> code with <em>Rcpp</em> requires <code>Rcpp</code> under both <code>LinkingTo</code> (for the headers used at compile time) and <code>Imports</code> (so it is available at run time). The driver calls <code>mirai</code> through namespaced calls, so <code>mirai</code> is listed under <code>Imports</code> as well.</p>
-<pre><code>LinkingTo:
-    Rcpp
-Imports:
-    Rcpp (&gt;= 1.0.12),
-    mirai (&gt;= 2.0.0)</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>LinkingTo:</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>    Rcpp</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>Imports:</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    Rcpp (&gt;= 1.0.12),</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>    mirai (&gt;= 2.0.0)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a>

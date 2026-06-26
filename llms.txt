@@ -202,11 +202,13 @@ Surfacing the *C++* code with *Rcpp* requires `Rcpp` under both
 is available at run time). The driver calls `mirai` through namespaced
 calls, so `mirai` is listed under `Imports` as well.
 
-    LinkingTo:
-        Rcpp
-    Imports:
-        Rcpp (>= 1.0.12),
-        mirai (>= 2.0.0)
+``` default
+LinkingTo:
+    Rcpp
+Imports:
+    Rcpp (>= 1.0.12),
+    mirai (>= 2.0.0)
+```
 
 ## Author
 
