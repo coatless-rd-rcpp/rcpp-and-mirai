@@ -6,17 +6,17 @@
 
 The `RcppMirai` _R_ package provides an example of housing a _C++_ function in a
 package and distributing it in parallel across a pool of
-[`mirai`](https://mirai.r-lib.org/) daemons. It mirrors the
-[`rcpp-and-doparallel`](https://github.com/coatless-rd-rcpp/rcpp-and-doparallel)
+[`mirai`][mirai] daemons. It mirrors the
+[`rcpp-and-doparallel`][rcpp-doparallel]
 example, swapping the `doParallel` and `foreach` backend for `mirai`.
 
 ### Usage
 
 To install the package, you must first have a compiler on your system that is
 compatible with R. For help on obtaining a compiler consult either
-[macOS](http://thecoatlessprofessor.com/programming/r-compiler-tools-for-rcpp-on-os-x/)
+[macOS][compiler-macos]
 or
-[Windows](http://thecoatlessprofessor.com/programming/rcpp/install-rtools-for-rcpp/)
+[Windows][compiler-windows]
 guides.
 
 With a compiler in hand, one can then install the package from GitHub by:
@@ -156,8 +156,8 @@ reach the compiled code on its own. A namespace-qualified call such as
 from an installed package on a daemon, since `::` loads the package and its
 compiled code on first use. There is nothing special to do for _Rcpp_ code
 beyond installing the package, a point confirmed in the
-[_mirai_ discussion on package development](https://github.com/r-lib/mirai/issues/137)
-and the [_mirai_ package vignette](https://mirai.r-lib.org/articles/v06-packages.html).
+[_mirai_ discussion on package development][mirai-issue]
+and the [_mirai_ package vignette][mirai-vignette].
 
 The function handed to `mirai_map()` is the package worker `bootstrap_chunk()`,
 defined at the top level of the package rather than inline. Because its
@@ -189,7 +189,7 @@ the headers used at compile time) and `Imports` (so it is available at run
 time). The driver calls `mirai` through namespaced calls, so `mirai` is listed
 under `Imports` as well.
 
-```
+```default
 LinkingTo:
     Rcpp
 Imports:
@@ -204,3 +204,10 @@ James Joseph Balamuta
 ## License
 
 GPL (\>= 2)
+
+[compiler-macos]: http://thecoatlessprofessor.com/programming/r-compiler-tools-for-rcpp-on-os-x/
+[compiler-windows]: http://thecoatlessprofessor.com/programming/rcpp/install-rtools-for-rcpp/
+[mirai]: https://mirai.r-lib.org/
+[mirai-issue]: https://github.com/r-lib/mirai/issues/137
+[mirai-vignette]: https://mirai.r-lib.org/articles/v06-packages.html
+[rcpp-doparallel]: https://github.com/coatless-rd-rcpp/rcpp-and-doparallel
